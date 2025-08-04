@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('https://media-assets.swiggy.com/dls-web-assets/dls/fonts/Gilroy-ExtraBold.eot') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.gilroy {
+  font-family: 'Gilroy', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+

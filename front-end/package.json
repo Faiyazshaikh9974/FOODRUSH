@@ -1,0 +1,35 @@
+{
+  "name": "root_of_react",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/Faiyazshaikh9974/React-Root_of_react#readme",
+  "bugs": {
+    "url": "https://github.com/Faiyazshaikh9974/React-Root_of_react/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Faiyazshaikh9974/React-Root_of_react.git"
+  },
+  "license": "ISC",
+  "author": "Faiyaz shaikh",
+  "type": "module",
+  "default": "index.html",
+  "scripts": {
+    "start": "parcel src/index.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@tailwindcss/postcss": "^4.1.11",
+    "axios": "^1.10.0",
+    "parcel": "^2.15.4",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-icons": "^5.5.0",
+    "react-router": "^7.7.0",
+    "react-router-dom": "^7.7.0",
+    "tailwindcss": "^4.1.11"
+  },
+  "devDependencies": {
+    "buffer": "^6.0.3"
+  }
+}
