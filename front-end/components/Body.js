@@ -74,11 +74,9 @@ const Body = () => {
         <button
           className="bg-gray-200 shadow hover:bg-gray-400 font-semibold text-black px-3 py-1 rounded-md"
           onClick={() => {
-          
             let TopRated = restoData.filter(
               (value) => value.info.avgRating > 4.3
             );
-          
 
             setFilteredData(TopRated);
           }}

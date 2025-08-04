@@ -1,8 +1,5 @@
-const ContactUs = ()=>{
-    return <div>
-        Welcome to ContactUs Page...
-    </div>
-}
-
+const ContactUs = () => {
+  return <div>Welcome to ContactUs Page...</div>;
+};
 
 export default ContactUs;

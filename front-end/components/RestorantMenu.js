@@ -7,7 +7,6 @@ import MenuItemContext from "../utils/MenuItemContext";
 const RestroantMenu = () => {
   let { restroId } = useParams();
 
-  const [showMenuItems, setShowMenuItems] = useState(false);
   const [showIndex, setshowIndex] = useState(0);
 
   const RestroData = useRestorantMenu(restroId); //custome hook that fetches restaurant menu data

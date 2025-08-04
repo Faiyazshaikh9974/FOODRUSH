@@ -1,4 +1,3 @@
-
 const RestorantCard = (props) => {
   let {
     name,
@@ -23,8 +22,7 @@ const RestorantCard = (props) => {
           <h3 className="font-bold">{name}</h3>
         </div>
         <h4>
-          
-          ★ {avgRating} •  {sla.slaString}
+          ★ {avgRating} • {sla.slaString}
         </h4>
         <p className="delivery-time"></p>
 
@@ -35,7 +33,6 @@ const RestorantCard = (props) => {
         <div className="explore-price">
           <p className="average-price">{costForTwo}</p>
         </div>
-        
       </div>
     </div>
   );
@@ -43,20 +40,17 @@ const RestorantCard = (props) => {
   //Hight order Restorant Card...
   //Take the input of the Restrorant Card
   //Output will be Restorant Card Promoted..
-
-  
 };
 
-export const EnhanceRestorantCard = (RestorantCard) =>{
-    return (props)=>{
-      return (
-        <div>
-          <label>Promoted</label>
-          <RestorantCard {...props} />
+export const EnhanceRestorantCard = (RestorantCard) => {
+  return (props) => {
+    return (
+      <div>
+        <label>Promoted</label>
+        <RestorantCard {...props} />
       </div>
-    
-    )
-    }
-  }
+    );
+  };
+};
 
 export default RestorantCard;

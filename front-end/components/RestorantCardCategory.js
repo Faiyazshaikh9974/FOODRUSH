@@ -4,39 +4,31 @@ import { useContext } from "react";
 import MenuItemContext from "../utils/MenuItemContext";
 // import { useState } from "react";
 
- 
-
-const RestorantCardCategory = ({ list, rating, index ,  }) => {
-
-  const { showIndex ,setshowIndex} = useContext(MenuItemContext);
+const RestorantCardCategory = ({ list, rating, index }) => {
+  const { showIndex, setshowIndex } = useContext(MenuItemContext);
 
   let isOpen = index == showIndex;
   const handleClick = () => {
-    setshowIndex(index)
+    setshowIndex(index);
     setshowIndex(isOpen ? null : index);
-    
   };
 
-  
-
- 
   // if(ListData) {var
   //    filterData = ListData.filter((data)=> data?.card?.card?.["@type"] == "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory")};
 
   return (
     <>
-      <div
-        className="w-full mt-3 border-b-10 rounded mb-2  border-b-gray-100"
-      >
-        <div onClick={handleClick} className="font-bold text-2xl flex justify-between hover:shadow-2xl">
+      <div className="w-full mt-3 border-b-10 rounded mb-2  border-b-gray-100">
+        <div
+          onClick={handleClick}
+          className="font-bold text-2xl flex justify-between hover:shadow-2xl"
+        >
           {list.card.card.title} ({list.card.card.itemCards.length})
           {isOpen ? <IoIosArrowUp /> : <IoIosArrowDown />}
         </div>
 
-        {isOpen && <MenuList list={list.card.card.itemCards} rating={rating}/>}
+        {isOpen && <MenuList list={list.card.card.itemCards} rating={rating} />}
 
-
-        
         {/* {showItems &&
           list.card.card.itemCards.map((itemCard) => {
             let { name, price, description, imageId, defaultPrice } =

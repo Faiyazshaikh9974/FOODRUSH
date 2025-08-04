@@ -1,13 +1,12 @@
-import React from 'react'
-import UserClass from './ClassBasedCopoenets/User'
+import React from "react";
+import UserClass from "./ClassBasedCopoenets/User";
 
 function AboutUs() {
   return (
     <div>
-      <UserClass username={"Faiyaz shaikh"}/>
-
+      <UserClass username={"Faiyaz shaikh"} />
     </div>
-  )
+  );
 }
 
-export default AboutUs
+export default AboutUs;

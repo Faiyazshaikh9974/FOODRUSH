@@ -9,7 +9,7 @@ const Header = () => {
     <div className="lg:flex justify-between bg-gray-50 shadow-lg items-center pl-65  pr-60 ">
       <div className="">
         <Link to="/">
-          <img 
+          <img
             src="https://img.freepik.com/premium-vector/restaurant-logo-design_636083-178.jpg"
             alt=""
             className="w-25  mix-blend-multiply"
