@@ -1,12 +1,21 @@
-const MenuList = ({ list, rating }) => {
+import { useDispatch } from "react-redux";
+
+import {addItem} from "../utils/Cart_Slice"
+const MenuList = ({ list, rating,  }) => {
+
+  const dispatch = useDispatch();
+
+  const handleAddFunction = ()=>{
+    
+  }
   return (
     <div>
-      {list.map((itemCard) => {
+      {list.map((itemCard, index) => {
         let { name, price, description, imageId, defaultPrice } =
           itemCard.card.info;
         return (
           <div
-            key={itemCard.card.info.id}
+            key={index}
             className="border-b-1 flex border-b-gray-300"
           >
             <div className="w-full relative">
@@ -31,8 +40,8 @@ const MenuList = ({ list, rating }) => {
                   alt={name}
                 />
 
-                <p className="absolute rounded-2xl shadow left-168 bottom-[3.9px] px-5 py-1 font-bold bg-white text-green-600">
-                  ADD
+                <p onClick={()=>{handleAddFunction(); dispatch(addItem(itemCard)) } } className="absolute rounded-2xl shadow left-167 bottom-[3.9px] px-5 py-1 font-bold bg-white text-green-600">
+                  ADD 
                 </p>
               </div>
             </div>

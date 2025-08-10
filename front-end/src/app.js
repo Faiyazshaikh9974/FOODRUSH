@@ -6,10 +6,15 @@ import AboutUs from "../components/AboutUs";
 import ContactUs from "../components/ContactUs";
 import RestroantMenu from "../components/RestorantMenu";
 import { lazy, Suspense } from "react";
+import {Provider} from "react-redux";
+import {Redux_Store} from "../utils/Redux_Store";
+import Cart from "../components/Cart";
 
 const Grocery = lazy(() => {
   return import("../components/Grocery");
 });
+
+
 
 // const restoData = [
 
@@ -101,16 +106,20 @@ const Grocery = lazy(() => {
 //main Component that Render Everything
 const App = () => {
   return (
+    <Provider store={Redux_Store}>
     <div className="main-Container">
       <Header />
       <Outlet />
     </div>
+    </Provider>
   );
 
   /* Header
    -NavBar
     -Logo, Menu Links 
 */
+
+
 
   /* Body
    -Search Input, Button
@@ -135,6 +144,7 @@ const appRouter = createBrowserRouter([
       { path: "/about", element: <AboutUs /> },
       { path: "/contact", element: <ContactUs /> },
       { path: "/restorant/:restroId", element: <RestroantMenu /> },
+      { path: "/cart", element: <Cart /> },
       {
         path: "/grocery",
         element: (

@@ -27,7 +27,7 @@ const RestorantCardCategory = ({ list, rating, index }) => {
           {isOpen ? <IoIosArrowUp /> : <IoIosArrowDown />}
         </div>
 
-        {isOpen && <MenuList list={list.card.card.itemCards} rating={rating} />}
+        {isOpen && <MenuList list={list.card.card.itemCards} index={index} rating={rating} />}
 
         {/* {showItems &&
           list.card.card.itemCards.map((itemCard) => {

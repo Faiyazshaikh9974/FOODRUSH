@@ -12,7 +12,7 @@ const RestorantCard = (props) => {
     avgRating,
   } = props.resData.info;
   return (
-    <div className="w-48 bg-gray-100 rounded-lg">
+    <div className="w-48  rounded-lg">
       <img
         className="w-56 h-36 rounded-t-lg bg-gray-100 "
         src={`https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_366/${cloudinaryImageId}`}
